@@ -13,3 +13,4 @@ Open `index.html` in a browser. Keep all three files in the same folder.
 ## Deploy (Vercel)
 1. Upload the files to the root of a GitHub repo.
 2. Import the repo on vercel.com, leave all settings as they are, click Deploy.
+     
