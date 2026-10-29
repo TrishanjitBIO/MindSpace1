@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MindSpace – Student well-being</title>
+  <meta name="description" content="MindSpace: an educational self-reflection tool for understanding stress and building small habits.">
+  <!-- ROOT CAUSE CHECK: this path must match the real file name exactly (style.css, same folder as index.html) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="app">
+    <!-- ============ DESKTOP SIDEBAR ============ -->
+    <aside class="sidebar" aria-label="Primary">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-4.5-3-8-6.2-8-10.2A4.8 4.8 0 0 1 12 7.6a4.8 4.8 0 0 1 8 3.2C20 14.800 16.500 18 12 21Z"/></svg>
+        </span>
+        <span class="brand-name">MindSpace</span>
+      </div>
+
+      <nav class="nav" aria-label="Sections">
+        <button class="nav-item" data-nav="home" type="button">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.500 12 4l9 7.500"/><path d="M5 10v10h14V10"/></svg>
+          <span>Home</span>
+        </button>
+        <button class="nav-item" data-nav="track" type="button">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>
+          <span>Track</span>
+        </button>
+        <button class="nav-item" data-nav="learn" type="button">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.500A2.500 2.500 0 0 1 6.500 3H20v16H6.500A2.500 2.500 0 0 0 4 21.500Z"/><path d="M4 5.500v16"/></svg>
+          <span>Learn</span>
+        </button>
+        <button class="nav-item" data-nav="breathe" type="button">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8h11a3 3 0 1 0-3-3"/><path d="M3 12h15a3 3 0 1 1-3 3"/><path d="M3 16h8"/></svg>
+          <span>Breathe</span>
+        </button>
+        <button class="nav-item" data-nav="habits" type="button">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12.500 2.700 2.700L16 9.500"/></svg>
+          <span>Habits</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-foot">
+        <p class="tagline">Small steps, kind to yourself.</p>
+        <button class="link-btn" type="button" data-open-privacy>Privacy</button>
+      </div>
+    </aside>
+
+    <!-- ============ MAIN ============ -->
+    <main id="main" class="main" tabindex="-1">
+
+      <!-- HOME -->
+      <section class="view" id="view-home" data-view="home" aria-labelledby="h-home">
+        <header class="page-head">
+          <div>
+            <h1 id="h-home">Welcome to your space</h1>
+            <p class="muted">Take a moment to check in with yourself.</p>
+          </div>
+          <time class="date-pill" id="today-date"></time>
+        </header>
+
+        <div class="card welcome">
+          <div class="welcome-text">
+            <h2>A little space for yourself.</h2>
+            <p>Understand your stress, notice how you feel, and build small habits that support your well-being.</p>
+            <div class="btn-row">
+              <button class="btn btn-primary" type="button" data-go="track">Check in</button>
+              <button class="btn btn-secondary" type="button" data-go="learn">Explore the science</button>
+            </div>
+          </div>
+          <div class="welcome-art" aria-hidden="true">
+            <span class="orb orb-1"></span><span class="orb orb-2"></span><span class="orb orb-3"></span>
+          </div>
+        </div>
+
+        <div class="grid-4">
+          <button class="card feature" type="button" data-go="track">
+            <span class="feature-icon"><svg class="icon icon-lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></span>
+            <h3>Track your mood</h3>
+            <p>Log how you feel and rate your stress in under a minute.</p>
+          </button>
+          <button class="card feature" type="button" data-go="learn">
+            <span class="feature-icon"><svg class="icon icon-lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.500A2.500 2.500 0 0 1 6.500 3H20v16H6.500A2.500 2.500 0 0 0 4 21.500Z"/><path d="M4 5.500v16"/></svg></span>
+            <h3>Understand stress</h3>
+            <p>See how the brain and body respond when you feel pressure.</p>
+          </button>
+          <button class="card feature" type="button" data-go="breathe">
+            <span class="feature-icon"><svg class="icon icon-lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8h11a3 3 0 1 0-3-3"/><path d="M3 12h15a3 3 0 1 1-3 3"/><path d="M3 16h8"/></svg></span>
+            <h3>Take a breathing break</h3>
+            <p>A guided one-minute exercise to slow things down.</p>
+          </button>
+          <button class="card feature" type="button" data-go="habits">
+            <span class="feature-icon"><svg class="icon icon-lg" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12.500 2.700 2.700L16 9.500"/></svg></span>
+            <h3>Build healthy habits</h3>
+            <p>Tick off small things that support you each day.</p>
+          </button>
+        </div>
+
+        <h2 class="section-title">Today's overview</h2>
+        <div class="grid-2" id="overview"></div>
+      </section>
+
+      <!-- TRACK -->
+      <section class="view" id="view-track" data-view="track" aria-labelledby="h-track" hidden>
+        <header class="page-head">
+          <div>
+            <h1 id="h-track">Track</h1>
+            <p class="muted">Notice how you feel. Entries stay on this device.</p>
+          </div>
+        </header>
+
+        <div class="grid-2 align-start">
+          <form class="card form" id="checkin-form" novalidate>
+            <h2>New check-in</h2>
+
+            <fieldset class="mood-set">
+              <legend>How are you feeling?</legend>
+              <div class="mood-grid">
+                <label class="mood"><input type="radio" name="mood" value="Calm"><span><i aria-hidden="true">🌿</i>Calm</span></label>
+                <label class="mood"><input type="radio" name="mood" value="Okay"><span><i aria-hidden="true">🙂</i>Okay</span></label>
+                <label class="mood"><input type="radio" name="mood" value="Worried"><span><i aria-hidden="true">😟</i>Worried</span></label>
+                <label class="mood"><input type="radio" name="mood" value="Low"><span><i aria-hidden="true">🌧️</i>Low</span></label>
+                <label class="mood"><input type="radio" name="mood" value="Positive"><span><i aria-hidden="true">☀️</i>Positive</span></label>
+              </div>
+            </fieldset>
+
+            <div class="field">
+              <label for="stress">Stress level: <output id="stress-out">5</output> / 10</label>
+              <input type="range" id="stress" min="1" max="10" step="1" value="5">
+              <div class="range-scale" aria-hidden="true"><span>1 · low</span><span>10 · high</span></div>
+            </div>
+
+            <div class="field">
+              <label for="note">Journal note <span class="muted">(optional)</span></label>
+              <textarea id="note" rows="4" maxlength="600" placeholder="Anything on your mind?"></textarea>
+            </div>
+
+            <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
+            <button class="btn btn-primary" type="submit">Save check-in</button>
+          </form>
+
+          <div class="card">
+            <div class="card-head">
+              <h2>History</h2>
+              <button class="btn btn-ghost" type="button" id="clear-all">Clear all</button>
+            </div>
+            <div id="history"></div>
+          </div>
+        </div>
+
+        <h2 class="section-title">Insights</h2>
+        <div class="card" id="insights"></div>
+      </section>
+
+      <!-- LEARN -->
+      <section class="view" id="view-learn" data-view="learn" aria-labelledby="h-learn" hidden>
+        <header class="page-head">
+          <div>
+            <h1 id="h-learn">Learn</h1>
+            <p class="muted">How your brain and body respond to stress. Educational only.</p>
+          </div>
+        </header>
+
+        <div class="grid-3">
+          <article class="card">
+            <span class="tag tag-sage">Amygdala</span>
+            <h3>The alarm system</h3>
+            <p>Scans for possible threats and can trigger a fast stress response, sometimes before you have consciously thought about it.</p>
+          </article>
+          <article class="card">
+            <span class="tag tag-sage">Hippocampus</span>
+            <h3>The memory hub</h3>
+            <p>Helps form memories and puts experiences in context. It also helps the brain judge whether a situation is actually safe.</p>
+          </article>
+          <article class="card">
+            <span class="tag tag-sage">Prefrontal cortex</span>
+            <h3>The thinking centre</h3>
+            <p>Supports planning, focus and decision-making, and helps regulate emotional reactions from deeper brain areas.</p>
+          </article>
+        </div>
+
+        <h2 class="section-title">The HPA axis</h2>
+        <div class="card">
+          <p class="muted">A simplified view of the body's main stress pathway.</p>
+          <ol class="flow" aria-label="HPA axis flow">
+            <li><strong>Hypothalamus</strong><span>Detects a stressor and releases CRH</span></li>
+            <li class="flow-arrow" aria-hidden="true">→</li>
+            <li><strong>Pituitary gland</strong><span>Releases ACTH into the blood</span></li>
+            <li class="flow-arrow" aria-hidden="true">→</li>
+            <li><strong>Adrenal glands</strong><span>Release cortisol</span></li>
+          </ol>
+          <p class="small muted">Cortisol also feeds back to the brain, helping switch the response off once the pressure passes.</p>
+        </div>
+
+        <h2 class="section-title">Body responses</h2>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Sympathetic nervous system</h3>
+            <p>The "fight-or-flight" branch. It raises heart rate and breathing to prepare you to act.</p>
+          </article>
+          <article class="card">
+            <h3>Adrenaline</h3>
+            <p>Released quickly. It brings fast changes such as a pounding heart, alertness and sweaty palms.</p>
+          </article>
+          <article class="card">
+            <h3>Cortisol</h3>
+            <p>Released more slowly. It helps mobilise energy and, over a long period of high stress, can affect sleep and mood.</p>
+          </article>
+        </div>
+
+        <h2 class="section-title">Knowledge check</h2>
+        <div class="card" id="quiz"></div>
+
+        <h2 class="section-title">Further reading</h2>
+        <div class="card">
+          <ul class="links">
+            <li><a href="https://www.nimh.nih.gov/health/publications/stress" target="_blank" rel="noopener noreferrer">NIMH – I'm So Stressed Out! Fact Sheet</a></li>
+            <li><a href="https://www.apa.org/topics/stress" target="_blank" rel="noopener noreferrer">American Psychological Association – Stress</a></li>
+            <li><a href="https://www.who.int/news-room/questions-and-answers/item/stress" target="_blank" rel="noopener noreferrer">World Health Organization – Stress Q&amp;A</a></li>
+          </ul>
+          <p class="small muted">Links open external sites. Please check they are still current.</p>
+        </div>
+      </section>
+
+      <!-- BREATHE -->
+      <section class="view" id="view-breathe" data-view="breathe" aria-labelledby="h-breathe" hidden>
+        <header class="page-head">
+          <div>
+            <h1 id="h-breathe">Breathe</h1>
+            <p class="muted">A one-minute guided breathing break.</p>
+          </div>
+        </header>
+
+        <div class="card breathe-card">
+          <div class="breath-stage" aria-hidden="true">
+            <div class="breath-circle" id="breath-circle"></div>
+            <div class="breath-text" id="breath-text">Ready</div>
+          </div>
+          <p class="breath-timer" id="breath-timer" role="timer" aria-live="off">1:00</p>
+          <p class="sr-only" id="breath-live" aria-live="polite"></p>
+          <div class="btn-row center">
+            <button class="btn btn-primary" type="button" id="breath-start">Start</button>
+            <button class="btn btn-secondary" type="button" id="breath-stop" disabled>Stop</button>
+            <button class="btn btn-ghost" type="button" id="breath-restart">Restart</button>
+          </div>
+          <p class="small muted center-text">Inhale for 4 seconds, exhale for 6. Stop any time if you feel uncomfortable.</p>
+        </div>
+      </section>
+
+      <!-- HABITS -->
+      <section class="view" id="view-habits" data-view="habits" aria-labelledby="h-habits" hidden>
+        <header class="page-head">
+          <div>
+            <h1 id="h-habits">Habits</h1>
+            <p class="muted">Optional, gentle and just for today.</p>
+          </div>
+          <time class="date-pill" id="habit-date"></time>
+        </header>
+
+        <div class="card">
+          <div class="progress-row">
+            <strong id="habit-count">0 of 5 done</strong>
+            <div class="progress" role="progressbar" aria-label="Habits completed today" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0" id="habit-bar"><span id="habit-fill"></span></div>
+          </div>
+          <ul class="habit-list" id="habit-list"></ul>
+          <p class="small muted">Any number is fine. Tomorrow starts fresh.</p>
+        </div>
+      </section>
+
+      <footer class="foot-note">
+        MindSpace is an educational self-reflection tool. It is not a diagnostic or medical service. If you are struggling, please speak to someone you trust or a qualified professional.
+      </footer>
+    </main>
+  </div>
+
+  <!-- ============ MOBILE BOTTOM NAV ============ -->
+  <nav class="bottom-nav" aria-label="Sections (mobile)">
+    <button class="bn-item" data-nav="home" type="button"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.500 12 4l9 7.500"/><path d="M5 10v10h14V10"/></svg><span>Home</span></button>
+    <button class="bn-item" data-nav="track" type="button"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg><span>Track</span></button>
+    <button class="bn-item" data-nav="learn" type="button"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.500A2.500 2.500 0 0 1 6.500 3H20v16H6.500A2.500 2.500 0 0 0 4 21.500Z"/><path d="M4 5.500v16"/></svg><span>Learn</span></button>
+    <button class="bn-item" data-nav="breathe" type="button"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8h11a3 3 0 1 0-3-3"/><path d="M3 12h15a3 3 0 1 1-3 3"/><path d="M3 16h8"/></svg><span>Breathe</span></button>
+    <button class="bn-item" data-nav="habits" type="button"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12.500 2.700 2.700L16 9.500"/></svg><span>Habits</span></button>
+  </nav>
+
+  <!-- Privacy + confirm dialogs -->
+  <dialog id="privacy-dialog" aria-labelledby="privacy-title">
+    <h2 id="privacy-title">Privacy</h2>
+    <p>Everything you enter stays in this browser on this device (localStorage). Nothing is sent to a server, and no account is needed. Clearing your browser data will remove it.</p>
+    <div class="btn-row"><button class="btn btn-primary" type="button" data-close-dialog>Close</button></div>
+  </dialog>
+
+  <dialog id="confirm-dialog" aria-labelledby="confirm-title">
+    <h2 id="confirm-title">Clear all history?</h2>
+    <p>This permanently deletes every saved check-in on this device.</p>
+    <div class="btn-row">
+      <button class="btn btn-danger" type="button" id="confirm-yes">Yes, clear all</button>
+      <button class="btn btn-secondary" type="button" data-close-dialog>Cancel</button>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
